@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: assists
+#
+#  id          :integer          not null, primary key
+#  match_id    :integer
+#  player_id   :integer
+#  player_name :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  match_id: 1
+  player_id: 1
+  player_name: MyString
+
+two:
+  match_id: 1
+  player_id: 1
+  player_name: MyString
