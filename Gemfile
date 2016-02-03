@@ -46,3 +46,6 @@ group :development do
 end
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 gem 'pry'
+gem 'poltergeist'
+gem 'phantomjs'
+gem "watir-rails"
