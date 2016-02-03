@@ -7,6 +7,9 @@
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  team_1_id  :integer
+#  team_2_id  :integer
+#  match_link :string
 #
 
 require 'test_helper'

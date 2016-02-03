@@ -7,6 +7,9 @@
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  team_1_id  :integer
+#  team_2_id  :integer
+#  match_link :string
 #
 
 class Match < ActiveRecord::Base
@@ -14,4 +17,10 @@ class Match < ActiveRecord::Base
   has_many :assists
   belongs_to :team_1, class_name: 'Team', foreign_key: :team_1_id
   belongs_to :team_2, class_name: 'Team', foreign_key: :team_2_id
+
+  before_save :set_name
+
+  def set_name
+    self.name = "#{self.team_1.name} vs #{self.team_2.name}"
+  end
 end
