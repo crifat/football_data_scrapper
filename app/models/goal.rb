@@ -10,6 +10,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  minute      :integer
+#  own_goal    :boolean          default(FALSE)
 #
 
 class Goal < ActiveRecord::Base

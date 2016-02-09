@@ -4,7 +4,11 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
   def index
-    @teams = Team.all
+    @teams = Team.all.order(:id)
+    respond_to do |format|
+      format.html
+      format.csv { send_data @teams.as_csv }
+    end
   end
 
   # GET /teams/1

@@ -4,7 +4,12 @@ class MatchesController < ApplicationController
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.all
+    @matches = Match.all.order(:id)
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @matches.as_csv }
+    end
   end
 
   # GET /matches/1
